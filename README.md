@@ -1,95 +1,160 @@
-# 📚 Data Structures & Algorithms (DSA) Implementation
+# DSA Playground
 
-## 🚀 Overview
+A comprehensive collection of Data Structures and Algorithms implemented in C, Java, and Python with an interactive web-based visualization interface.
 
-This repository contains implementations of classic data structures and algorithms in C, Java, Python, and JavaScript. Each implementation is designed with clarity, efficiency, and interview-prep in mind. The repo also includes unit tests and time complexity analysis for every algorithm.
+---
 
-## 🌐 Web Interface
+## What It Does
 
-This project also includes an interactive web interface that demonstrates the same data structures and algorithms directly in your browser. No installation required - just open `index.html` in your browser or run the included server.
+Educational platform for learning and practicing Data Structures and Algorithms with:
+- 12 Data Structures implementations
+- 11 Algorithm implementations
+- Multi-language support (C, Java, Python)
+- Interactive web visualizer
+- Unit tests and benchmarks
 
-## 🛠️ Tech Stack
+## Data Structures Implemented
 
-- **Languages**: C, Java, Python, JavaScript
-- **Testing**: JUnit (Java), unittest (Python), custom test cases (C)
-- **Documentation**: Markdown with explanations & complexity notes
-- **Web Interface**: HTML, CSS, JavaScript
+| Data Structure | C | Java | Python |
+|---------------|---|------|--------|
+| Array / Dynamic Array | ✅ | ✅ | ✅ |
+| Singly Linked List | ✅ | ✅ | ✅ |
+| Doubly Linked List | ✅ | ✅ | ✅ |
+| Stack | ✅ | ✅ | ✅ |
+| Queue / Circular Queue | ✅ | ✅ | ✅ |
+| Binary Search Tree | ✅ | ✅ | ✅ |
+| AVL Tree | ✅ | ✅ | ✅ |
+| Red-Black Tree | ✅ | ✅ | ✅ |
+| Heap (Min/Max) | ✅ | ✅ | ✅ |
+| Hash Table | ✅ | ✅ | ✅ |
+| Graph (Adjacency List/Matrix) | ✅ | ✅ | ✅ |
+| Trie | ✅ | ✅ | ✅ |
 
-## 📂 Contents
+## Algorithms Implemented
 
-### 🔹 Data Structures
+| Algorithm | C | Java | Python |
+|-----------|---|------|--------|
+| Bubble Sort | ✅ | ✅ | ✅ |
+| Merge Sort | ✅ | ✅ | ✅ |
+| Quick Sort | ✅ | ✅ | ✅ |
+| Heap Sort | ✅ | ✅ | ✅ |
+| Binary Search | ✅ | ✅ | ✅ |
+| DFS (Graph) | ✅ | ✅ | ✅ |
+| BFS (Graph) | ✅ | ✅ | ✅ |
+| Dijkstra's Shortest Path | ✅ | ✅ | ✅ |
+| A* Search | ✅ | ✅ | ✅ |
+| Kruskal's MST | ✅ | ✅ | ✅ |
+| Prim's MST | ✅ | ✅ | ✅ |
 
-**Linear Data Structures:**
-- Singly Linked List - O(1) insert/delete at front, O(n) at end
-- Doubly Linked List - O(1) insert/delete at both ends
-- Circular Linked List - Circular reference implementation
-- Stack (Array-based) - O(1) push/pop operations
-- Queue (Array-based) - O(1) enqueue, O(n) dequeue
-- Priority Queue - O(n) insert, O(1) dequeue
-- Deque (Double-ended Queue) - O(1) operations at both ends
+## Project Structure
 
-**Tree Data Structures:**
-- Binary Search Tree - O(log n) avg, O(n) worst case
-- AVL Tree (Self-balancing) - O(log n) guaranteed
-- Min Heap - O(log n) insert/extract, O(1) peek
+```
+dsa-playground/
+├── c/                          # C implementations
+│   ├── include/               # Header files
+│   ├── src/                   # Source files
+│   ├── tests/                 # Unit tests
+│   └── Makefile
+├── java/                       # Java implementations
+│   ├── src/
+│   │   ├── datastructures/
+│   │   ├── algorithms/
+│   │   └── utils/
+│   ├── test/
+│   └── pom.xml
+├── python/                     # Python implementations
+│   ├── datastructures/
+│   ├── algorithms/
+│   ├── tests/
+│   └── requirements.txt
+├── web/                        # Interactive web visualizer
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── utils/
+│   ├── package.json
+│   └── vite.config.ts
+├── benchmarks/                 # Performance benchmarks
+├── docs/                       # Documentation
+├── README.md
+└── LICENSE
+```
 
-**Graph Data Structures:**
-- Adjacency List representation
-- BFS (Breadth-First Search) - O(V + E)
-- DFS (Depth-First Search) - O(V + E)
-- Dijkstra's Shortest Path - O(V²) or O(E log V)
+## Quick Start
 
-**Hash-based:**
-- Hash Table with collision handling - O(1) avg operations
+### C Implementation
+```bash
+cd c
+make
+./bin/dsa_demo
+# Run tests
+make test
+```
 
-### 🔹 Algorithms
+### Java Implementation
+```bash
+cd java
+mvn compile
+mvn exec:java -Dexec.mainClass="com.dsa.Main"
+# Run tests
+mvn test
+```
 
-**Sorting Algorithms:**
-- Bubble Sort - O(n²) time, O(1) space
-- Selection Sort - O(n²) time, O(1) space
-- Insertion Sort - O(n²) time, O(1) space
-- Merge Sort - O(n log n) time, O(n) space
-- Quick Sort - O(n log n) avg, O(n²) worst
-- Heap Sort - O(n log n) time, O(1) space
-- Radix Sort - O(d×(n+k)) time, O(n+k) space
+### Python Implementation
+```bash
+cd python
+pip install -r requirements.txt
+python -m datastructures.demo
+# Run tests
+pytest tests/
+```
 
-**Searching Algorithms:**
-- Linear Search - O(n) time, O(1) space
-- Binary Search - O(log n) time, O(1) space
+### Web Visualizer
+```bash
+cd web
+npm install
+npm run dev
+# Opens at http://localhost:5173
+```
 
-Each includes comprehensive time & space complexity analysis
+## Web Visualizer Features
 
-### 🔹 Languages
+- Interactive step-by-step algorithm execution
+- Visual representation of data structure operations
+- Complexity analysis display
+- Code highlighting for all three languages
+- Dark/Light theme support
 
-- C
-- Java
-- Python
-- JavaScript (for web interface)
+## Educational Use
 
-### 🔹 Testing
+Each implementation includes:
+- Time and space complexity annotations
+- Inline comments explaining key steps
+- Unit tests verifying correctness
+- Example usage in `demo` or `main` files
 
-- C: Custom test framework
-- Java: JUnit 5
-- Python: unittest
+## Benchmarks
 
-Each implementation includes comprehensive unit tests covering normal cases, edge cases, and error conditions.
+Run performance comparisons:
+```bash
+cd benchmarks
+python run_benchmarks.py
+```
+Results show relative performance across languages for each algorithm.
 
-### 🔹 Web Interface
+---
 
-- **Complete Interactive Playground** - All 12 data structures + 11 algorithms
-- **Real-time Operations** - Insert, delete, search, traverse with live feedback
-- **Algorithm Visualization** - Step-by-step sorting and searching demonstrations
-- **Cross-platform** - Works in any modern browser
-- **Educational Focus** - Time/space complexity displayed for each operation
-- **Responsive Design** - Optimized for desktop, tablet, and mobile
+## Author
 
-## ✅ Unit Tests
+**SAMALA RAKSHITH BABU**  
 
-Covers correctness, edge cases, and performance
-Ensures reliability of implementations
+**Contact:**  
+- Email: samalarakshithbabu7@gmail.com  
+- LinkedIn: https://www.linkedin.com/in/samala-rakshith-babu/  
+- GitHub: https://github.com/samalarakshithbabu  
 
-## 🎯 Why This Project?
+---
 
-- Reinforces core CS fundamentals
-- Prepares for coding interviews & exams
-- Demonstrates problem-solving ability and clean code practices
+## License
+
+MIT License
